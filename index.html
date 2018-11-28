@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>My account</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <div class="topnav">
+            <a href="javascript:void(0)" class="openbtn" onclick="openNav()"><img src="images/arrow.svg"></a>
+            <figure>
+                <figcaption>Giselle</figcaption>
+                <div id="avatar"></div>
+            </figure>
+        </div>
+        
+        <div class="heading">
+            <h2>Your account</h2>
+            <p>Tell us a little more about yourself</p>
+        </div>
+        
+        <form >
+            <fieldset>
+                
+                <div> 
+                    <h3 >Personal information</h3>
+                </div>
+                
+                <div>
+                    <label for="firstname">First name</label>
+                    <br>
+                    <input type="text" id="firstname" value="Giselle" placeholder="First name">
+                </div>
+                
+                <div>
+                    <label for="lastname">Last name</label>
+                    <br>
+                    <input id="lastname" type="text" name="lastname" placeholder="Last name">
+                </div>
+                
+                <div>
+                    <label for="phone">Phone</label>
+                    <br>
+                    <input id="phone" type="tel" name="phone" placeholder="Phone">
+                </div>
+                
+                <div>
+                    <label for="countries">Country</label>   
+                    <br>
+                    <select name="countries" id="countries">
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="fr">France</option>
+                        <option value="au">Austria</option>
+                    </select> 
+                </div>
+                
+                
+            </fieldset>
+        </form>
+        
+        
+    </div>
+    
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/next.svg"></a>
+        <h2>Giselle</h2>
+        <a href="#">ACOUNT</a>
+        <a href="#">Career</a>
+        <a href="#">Personal</a>
+        <a href="#">MANAGE</a>
+        <a href="#">Password</a>
+        <a href="#">Email</a>
+    </ul>
+</div>
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").classList.add('active');
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").classList.remove('active')
+    }
+</script>
+
+</body>
+
+</html>

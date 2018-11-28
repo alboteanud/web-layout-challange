@@ -1,0 +1,179 @@
+@font-face {
+  font-family: regularFont;
+  src: url(fonts/hinted-GorditaRegular.ttf);
+}
+
+@font-face {
+  font-family: boldFont;
+  src: url(fonts/hinted-GorditaBold.ttf);
+}
+
+@font-face {
+  font-family: mediumFont;
+  src: url(fonts/hinted-GorditaMedium.ttf);
+}
+
+body,
+html {
+  font-family: 'regularFont';
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: fit-content(20%) fit-content(20%) 1fr;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto fit-content(50%);
+  padding: 1rem;
+}
+
+.heading {
+  margin: 0 auto 8rem auto;
+  text-align: center;
+}
+
+.heading h2 {
+  margin-top: 0;
+}
+
+form {
+  margin: 0 auto;
+}
+
+fieldset{
+  border: 0;
+  padding: 2rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 4rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 0.1rem solid #ddd;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:focus {
+  background-color: #eee;
+}
+
+figure {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: auto 0;
+}
+
+figcaption {
+  margin: auto 1rem;
+}
+
+#avatar {
+  border-radius: 50%;
+  background: #E1E1E1;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FCFCFC;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 1.2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active {
+  width: 240px;
+}
+
+.sidenav a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidenav .closebtn,
+.openbtn {
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.closebtn, .sidenav h2{
+  margin-left: 1rem;
+}
+
+.openbtn {
+  background: #DC412E;
+  margin: auto 0;
+}
+
+.openbtn:hover {
+  background: #BC210E;
+}
+
+fieldset div:nth-of-type(1) {
+  animation-delay: 0s;
+}
+fieldset div:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+fieldset div:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+fieldset div:nth-of-type(4) {
+  animation-delay: 0.9s;
+}
+fieldset div:nth-of-type(5) {
+  animation-delay: 1.2s;
+}
+
+@keyframes cascadeInSimple { 
+  0% {  opacity:0; } 
+  100% {  opacity:1; }
+}
+
+fieldset div {
+  opacity: 0;
+  animation: cascadeInSimple 0.4s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 450px) {
+
+  .sidenav a {
+    text-align: center;
+  }
+ 
+  .sidenav h2 {
+    text-align: center;
+    margin: 1rem 0 2rem;
+  }
+ 
+  .active {
+    width: 100%;
+  }
+ 
+}
